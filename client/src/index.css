@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Labrada:wght@600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Labrada', serif;
+    overflow-x: hidden;
+}
+
+@layer utilities{
+  .hover-img2 .img2{
+    z-index: 30;
+  }
+}
+
+.category-image
+{
+  width: 24rem;
+  height: 15rem;
+  object-fit: contain;
+  cursor: pointer;
+  transition: all .3s;
+  opacity: .9;
+
+}
+
+.category-image:hover{
+opacity: .95;
+}
+
+.categoty-flexbox
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.show{
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    /* background-color: blueviolet; */
+    transform: translatey(0);
+    transition: all .5s ease-in-out;
+}
+.hide{
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    transform: translatey(-120%);
+    transition: all .5s ease-in-out;
+}
+.hover-img2 {
+   background-color: blue;
+  }
+
+
+.text-size {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  @media (min-width: 768px) {
+    .text-size {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .category-image
+    {
+      width: 24rem;
+      height: 15rem;
+      object-fit: contain;
+      cursor: pointer;
+      transition: all .3s;
+      opacity: .9;
+    }
+  }
